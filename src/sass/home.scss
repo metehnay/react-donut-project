@@ -1,0 +1,34 @@
+.cc {
+  height: 200px !important;
+}
+
+#bg {
+  position: absolute;
+  height: 100vh;
+
+  width: 100%;
+  object-fit: cover;
+  filter: blur(0px) grayscale(30%);
+  z-index: -999;
+}
+
+.navbar {
+  background-color: rgba(15, 17, 17, 0.6);
+  height: 75px;
+}
+
+.navbar h2 {
+  font-size: 44px;
+  color: #58cad0;
+  font-family: "Pacifico", cursive;
+}
+.ww {
+  max-width: 540px !important;
+  background-color: rgba(0, 0, 0, 0.7);
+  border: none;
+  box-shadow: 0 0 10px 1px rgb(98, 100, 97);
+}
+
+#ikon {
+  height: 45px;
+}
