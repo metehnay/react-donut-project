@@ -1,0 +1,30 @@
+li {
+  list-style-type: none;
+}
+
+.ul li {
+  margin-right: 2rem;
+  margin-top: 5px;
+}
+
+.navbarx {
+  background-color: rgba(15, 17, 17, 0.6);
+  height: 75px;
+}
+
+.navbarx h2 {
+  font-size: 44px;
+  color: #58cad0;
+  font-family: "Pacifico", cursive;
+  align-items: center;
+  padding-top: 5px;
+}
+
+.fm {
+  font-family: "Pacifico", cursive;
+}
+
+.login {
+  border: 1px solid #fff;
+  padding: 6px 35px;
+}

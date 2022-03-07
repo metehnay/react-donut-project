@@ -12,15 +12,17 @@
   z-index: -999;
 }
 
-.navbar {
+.navbarx {
   background-color: rgba(15, 17, 17, 0.6);
   height: 75px;
 }
 
-.navbar h2 {
+.navbarx h2 {
   font-size: 44px;
   color: #58cad0;
   font-family: "Pacifico", cursive;
+  align-items: center;
+  padding-top: 5px;
 }
 .ww {
   max-width: 540px !important;
@@ -31,4 +33,68 @@
 
 #ikon {
   height: 45px;
+}
+
+.dd {
+  height: calc(100vh - 416px);
+  align-items: center;
+}
+
+.donut-container {
+  margin-top: 1rem;
+}
+
+#donut-img {
+  width: 345px;
+  height: 345px;
+}
+
+.styles-module_item-container__a8zaY {
+  width: 345px !important;
+}
+
+.tp {
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+}
+
+.article-wrap {
+  float: none;
+  max-width: 100%;
+  min-width: 100px;
+  text-align: center;
+  margin-top: -13px;
+  margin-bottom: -13px;
+}
+
+.article-category {
+  float: none;
+  display: inline-block;
+  border-radius: 2px;
+  position: relative;
+  font-size: 11px;
+  color: #fff;
+  background-color: $primary;
+  border-radius: 4px;
+  font-weight: 700;
+  text-transform: uppercase;
+  padding-top: 2px;
+  padding-right: 2px;
+  padding-bottom: 1px;
+  padding-left: 2px;
+}
+
+#donut-img-2 {
+  width: 200px;
+  height: 200px;
+}
+
+.hot {
+  padding: 10px 0;
+  margin: 0 0 25px;
+  font-size: 45px;
+  line-height: 30px;
+  background: url("../img/donut-border.png") bottom repeat-x;
+  font-family: $Font-Main;
 }
