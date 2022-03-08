@@ -5,13 +5,19 @@ import { db, auth } from "../../configs/firebase";
 import { Carousel } from '@trendyol-js/react-carousel';
 import {GiDonut} from 'react-icons/gi'
 import Donuts from '../Donuts/Donuts';
-
+import 'keen-slider/keen-slider.min.css'
+import KeenSlider from 'keen-slider'
+import Slider from './Slider';
 const Home = () => {
   const { isAuth, setIsAuth, postLists, setPostList } = useContext(MainContext);
 
 
   return (
     <>
+    <div className="slider-contain">
+      <Slider />
+      
+      </div>
 <div className="container-fluid py-4">
     <div className="container py-4 pb-4 fe" style={{borderTop: "3px solid #52ccd1"}}>
       <h4 className="hot">What's <span style={{color: "#52CCD1"}}>Popular</span></h4>

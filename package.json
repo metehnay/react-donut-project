@@ -13,6 +13,7 @@
     "embla-carousel-autoplay": "^6.2.0",
     "embla-carousel-react": "^6.2.0",
     "firebase": "^9.6.8",
+    "keen-slider": "^6.6.3",
     "node-sass": "^7.0.1",
     "react": "^17.0.2",
     "react-bootstrap": "^2.2.0",
@@ -22,6 +23,7 @@
     "react-scripts": "5.0.0",
     "react-share": "^4.4.0",
     "react-toastify": "^8.2.0",
+    "uuid": "^8.3.2",
     "web-vitals": "^2.1.4"
   },
   "scripts": {
