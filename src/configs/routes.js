@@ -24,7 +24,7 @@ const commonRoutes = [
     element: <AddDonut />,
   },
   {
-    path: "/donuts/:title",
+    path: "/donuts/:id/:title",
     element: <SinglePage />,
   },
 ];

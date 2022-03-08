@@ -13,12 +13,12 @@ const Home = () => {
   return (
     <>
 <div className="container-fluid py-4">
-    <div className="container py-4">
+    <div className="container py-4 pb-4 fe" style={{borderTop: "3px solid #52ccd1"}}>
       <h4 className="hot">What's <span style={{color: "#52CCD1"}}>Popular</span></h4>
       <div className="d-flex flex-row flex-wrap">
     {postLists.slice(0, 6).map((post) => (
     <>
-    <div className="d-flex flex-column m-2">
+    <div className="d-flex flex-column m-2 qw">
           <img src={post.imageURL} id="donut-img-2"/>     
           <h5 className=" py-2">{post.title}</h5>
           <div className="d-flex">

@@ -11,7 +11,7 @@ const ikon = {
 const Header = () => {
   return (
     <>
-    <div className="navbar d-flex justify-content-around bg-primary">
+    <div className="navbar d-flex justify-content-around bgx">
         <div className="nav-brand text-light h2 fm">Tasty Donuts</div>
         <ul className="ul d-flex h5 text-light">
         <li><AiFillHome style={ikon}/><Link to="/">Home</Link></li>

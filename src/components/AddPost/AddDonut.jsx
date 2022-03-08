@@ -4,6 +4,8 @@ import { db, auth } from "../../configs/firebase";
 import { useNavigate, Link } from "react-router-dom";
 import { Form, Button, Row, Col, Card, Container } from "react-bootstrap";
 import { useContext, MainContext } from "../../hook/Context";
+import RichEditor from "./RichEditor";
+
 
 const AddDonut = () => {
   const { isAuth, setIsAuth } = useContext(MainContext);
@@ -93,6 +95,7 @@ const AddDonut = () => {
             </Col>
           </Form.Group>
         </Form>
+        
       </Container>
     </>
   );
