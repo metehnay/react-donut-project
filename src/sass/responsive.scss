@@ -1,3 +1,82 @@
-.qw {
-  width: 300px;
+.mobile-navigation {
+  display: none;
+}
+
+@media (max-width: 995px) {
+  .responsive-donut {
+    flex-direction: column !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+  }
+
+  #donut-img-3 {
+    width: 100% !important;
+  }
+
+  .image-box {
+    width: 100% !important;
+  }
+
+  .mobile-donut {
+    display: none !important;
+  }
+
+  .btn-slide {
+    display: none !important;
+  }
+}
+
+@media (max-width: 727px) {
+  .mobile-navigation {
+    display: flex !important;
+    padding-bottom: 1.2rem;
+    width: 100% !important;
+    color: #fff;
+    height: 60px;
+    position: sticky;
+    background: rgb(55, 63, 104);
+    top: 0rem;
+    z-index: 99999;
+  }
+
+  .card-box {
+    width: 240px;
+  }
+
+  .bgx {
+    display: none !important;
+  }
+  .burgers {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    margin: 0 !important;
+    top: 50px;
+    position: fixed;
+    right: 0;
+    left: 0;
+    padding: 10px;
+    z-index: 99999 !important;
+    width: 100% !important;
+    opacity: 1 !important;
+    background: $primary;
+  }
+
+  li {
+    margin: 10px auto !important;
+    opacity: 1;
+    list-style-type: none;
+  }
+}
+
+@media (max-width: 350px) {
+  .slider-contain {
+    display: none !important;
+  }
 }

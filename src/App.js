@@ -10,6 +10,7 @@ import { MainContext } from "./hook/Context";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "./components/Header";
+import MobileNavigation from "./components/Mobile/MobileNavigation";
 
 function App() {
   const postsCollectionRef = collection(db, "posts");
@@ -46,6 +47,7 @@ function App() {
 
         <Router>
           <Header />
+          <MobileNavigation />
           <Routes>
             {commonRoutes.map((RouteItem, index) => (
               <Route

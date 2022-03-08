@@ -16,18 +16,19 @@ const SinglePage = () => {
     <div className="container-fluid">
         <div className="container py-4">
         <div className="row py-2">
-            <div className="col-8 oop p-2">
+            <div className="col-9 oop ">
                 {postLists.filter(card => card.id === id).map((card,index) => (
                  <>
                                   <h2 className="p-2 m-2">{card.title}</h2>
                                   <div className="d-flex flex-row py-2 my-2">
                  <img src={card.photoURL} className="tp my-1" />
-<p className="mx-2 opacity-75">Posted by {card.name}</p>
+<p className="mx-2 opacity-75 my-auto">Posted by {card.name}</p>
 </div>
  <SocialShare imageURL={card.imageURL} /> 
-
-                 <img src={card.imageURL} id="single-image" className="p-2 mx-auto"/>
-              <p className="p-2 m-2">
+ <div className="img-card py-2">
+                 <img src={card.imageURL} className="single-image"/>
+                 </div>
+              <p className="p-2 m-2 single-post">
                 {card.recipe}
               </p>
                  </>   
