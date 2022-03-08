@@ -28,6 +28,28 @@ function App() {
   const [loading, setLoading] = useState(true);
   const [success, setSuccess] = useState(false);
   const [postLists, setPostList] = useState([]);
+  const [favorites, setFavorites] = useState(localStorage.getItem("dam"));
+
+  useEffect(() => {
+    const localData = JSON.parse(localStorage.getItem("dam")) ?? [];
+    setFavorites(localData);
+  }, [setFavorites]);
+
+  const addFavorite = (favorite) => {
+    setFavorites([...favorites, favorite]);
+
+    localStorage.setItem("dam", JSON.stringify([...favorites, favorite]));
+
+    toast(`Donut added to your Liked list!`, {
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      theme: "light",
+      pauseOnHover: true,
+      draggable: false,
+    });
+  };
 
   const data = {
     isAuth,
@@ -35,6 +57,9 @@ function App() {
     loading,
     postLists,
     setPostList,
+    favorites,
+    setFavorites,
+    addFavorite,
     setLoading,
     success,
     setSuccess,

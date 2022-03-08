@@ -4,12 +4,17 @@ import Home from "../components/Home/Home";
 import AddDonut from "../components/AddPost/AddDonut";
 import Donuts from "../components/Donuts/Donuts";
 import SinglePage from "../components/Donuts/SinglePage";
+import Liked from "../components/Liked/Liked";
 
 // General |
 const commonRoutes = [
   {
     path: "/login",
     element: <LoginForm />,
+  },
+  {
+    path: "/liked",
+    element: <Liked />,
   },
   {
     path: "/signup",

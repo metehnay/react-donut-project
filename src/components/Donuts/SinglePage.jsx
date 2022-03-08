@@ -16,7 +16,7 @@ const SinglePage = () => {
     <div className="container-fluid">
         <div className="container py-4">
         <div className="row py-2">
-            <div className="col-9 oop ">
+            <div className="col-xl-9 col-sm-12 oop ">
                 {postLists.filter(card => card.id === id).map((card,index) => (
                  <>
                                   <h2 className="p-2 m-2">{card.title}</h2>

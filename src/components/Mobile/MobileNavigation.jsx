@@ -28,7 +28,7 @@ const MobileNavigation = ({ isAuth, setIsAuth }) => {
   return (
     <nav className="mobile-navigation" style={{backgroundColor: "#52ccd1"}}>
       <div className="burgers"> {open ? closeIcon : burgerIcon} </div>
-      <h2 style={{ marginLeft: "10px", marginTop: "10px"}} className="fm">Tasty Donuts</h2>
+      <h2 style={{ marginLeft: "10px", marginTop: "10px"}} className="fm"><Link to="/">Tasty Donuts</Link></h2>
       {open && (
         <>
           <MobileLinks

@@ -10,7 +10,7 @@ import 'keen-slider/keen-slider.min.css'
 import KeenSlider from 'keen-slider'
 import Slider from './Slider';
 const Home = () => {
-  const { isAuth, setIsAuth, postLists, setPostList } = useContext(MainContext);
+  const { isAuth, setIsAuth, postLists, setPostList, favorite, setFavorite, addFavorite, id} = useContext(MainContext);
 
 
   return (
@@ -28,7 +28,7 @@ const Home = () => {
         <div className="col-xl-8 col-sm-12 col-lg-12 col-md-8">
     {postLists.slice(0, 6).map((post) => (
     <>
- <Donuts post={post}/>
+ <Donuts post={post} addFavorite={addFavorite} key={post.id} isAuth={isAuth} />
           </>
         ))}
         </div>
@@ -45,11 +45,13 @@ const Home = () => {
           <img src={post.imageURL} id="donut-img-2"/>    </div> 
           <h5 className=" py-2">{post.title}</h5>
           <div className="d-flex">
+            
           <img src={post.photoURL} className="tp my-1" />
           <p className="mx-2 my-auto opacity-75">by {post?.name}</p>
+         
           </div></div>
           </Link>
-
+       
           </>
         ))}
            </div></div>

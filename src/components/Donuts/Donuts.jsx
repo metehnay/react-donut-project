@@ -1,7 +1,8 @@
 import React from 'react'
 import {Link} from 'react-router-dom'
+import {AiFillHeart} from 'react-icons/ai'
 
-const Donuts = ({post}) => {
+const Donuts = ({post, addFavorite, isAuth}) => {
     const {title, imageURL,name,recipe, photoURL, id} = post;
   return (
     <>
@@ -15,15 +16,23 @@ const Donuts = ({post}) => {
           <div className="d-flex mx-2">
 
           <img src={photoURL} className="tp my-1" />
-
+    
+  <div className="butons">
+   
+  
+  </div>
           <p className="mx-2 my-auto opacity-75">by {name}</p>
           </div>
           <p className="more"><Link to={`/donuts/${id}/${title}`}>Read More</Link></p> 
 
        </div>
+       <AiFillHeart style={{color: "red", cursor: "pointer", height: "50px", width: "30px"}} 
+      onClick={ () => addFavorite(id)}
+/>
          </div>
        </>
   )
 }
 
 export default Donuts
+

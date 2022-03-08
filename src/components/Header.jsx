@@ -40,7 +40,7 @@ const Header = () => {
 
         <li> <FaCloudUploadAlt style={ikon} /><Link to="/addDonut">Add Donut</Link></li>
           <li><AiFillTrophy style={ikon}/>Popular</li>
-          <li><AiFillHeart style={ikon}/>Liked</li>
+          <li><AiFillHeart style={ikon}/><Link to="/liked">Liked</Link></li>
           {isAuth ? <>
             <li onClick={signUserOut} id="logged-user" style={{cursor: "pointer"}}>
               Log out
