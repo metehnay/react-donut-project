@@ -14,8 +14,9 @@ const Liked = ({ isAuth, setIsAuth, addFavorite }) => {
           <button
             onClick={removeFavourites}
             className="btn btn-primary border-0 fixo w-100"
+            style={{color: "#ffffff"}}
           >
-            REMOVE FAVORITES
+            REMOVE LIKED DONUTS
           </button>
         </p>
         <div className="sidebar">

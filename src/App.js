@@ -11,9 +11,12 @@ import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import Header from "./components/Header";
 import MobileNavigation from "./components/Mobile/MobileNavigation";
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 function App() {
   const postsCollectionRef = collection(db, "posts");
+  const MySwal = withReactContent(Swal);
 
   useEffect(() => {
     const getPosts = async () => {
@@ -51,6 +54,52 @@ function App() {
     });
   };
 
+  const removeFavourites = () => {
+    const greet = () => {
+      localStorage.removeItem("dam");
+
+      window.location.reload();
+    };
+    MySwal.fire({
+      title: "REMOVING LIKED DONUTS",
+      icon: "warning",
+      text: `Are you sure? you wan't to delete all your liked donuts.`,
+      showCancelButton: true,
+      confirmButtonText: "Delete",
+      customClass: {
+        confirmButton: "btn btn-primary m-2 p-2",
+        cancelButton: "btn btn-success m-2 p-2",
+      },
+      showClass: {
+        backdrop: "swal2-noanimation", // disable backdrop animation
+        popup: "", // disable popup animation
+        icon: "", // disable icon animation
+      },
+      hideClass: {
+        backdrop: "swal2-noanimation", // disable backdrop animation
+        popup: "", // disable popup animation
+        icon: "", // disable icon animation
+      },
+      buttonsStyling: false,
+    }).then((result) => {
+      if (result.isConfirmed) {
+        toast(`Liked Donut's deleting. Please wait...`, {
+          position: "top-right",
+          autoClose: 2500,
+          hideProgressBar: false,
+          closeOnClick: true,
+          theme: "light",
+          pauseOnHover: true,
+          draggable: false,
+        });
+
+        setTimeout(greet, 3000);
+      } else {
+        alert("cool");
+      }
+    });
+  };
+
   const data = {
     isAuth,
     setIsAuth,
@@ -60,6 +109,7 @@ function App() {
     favorites,
     setFavorites,
     addFavorite,
+    removeFavourites,
     setLoading,
     success,
     setSuccess,

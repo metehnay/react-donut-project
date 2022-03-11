@@ -6,11 +6,14 @@ import { Carousel } from '@trendyol-js/react-carousel';
 import {GiDonut} from 'react-icons/gi'
 import Donuts from '../Donuts/Donuts';
 import {Link} from 'react-router-dom'
+import donut from "../../img/donut-icon.png"
+import VanillaTilt from 'vanilla-tilt';
 import 'keen-slider/keen-slider.min.css'
 import KeenSlider from 'keen-slider'
 import Slider from './Slider';
 const Home = () => {
   const { isAuth, setIsAuth, postLists, setPostList, favorite, setFavorite, addFavorite, id} = useContext(MainContext);
+  const donutAni = useRef()
 
 
   return (
@@ -23,7 +26,9 @@ const Home = () => {
   
            
            <div className="container py-4 xd">
-      <h4 className="hot m-2">New <span style={{color: "#52CCD1"}}>Donuts!</span></h4>
+             <div className="d-flex">
+           <img src={donut} style={{height: "45px"}} ref={donutAni} /> 
+      <h4 className="hot m-2">New <span style={{color: "#52CCD1"}}>Donuts!</span></h4></div>
       <div className="d-flex flex-column flex-wrap row">
         <div className="col-xl-8 col-sm-12 col-lg-12 col-md-8">
     {postLists.slice(0, 6).map((post) => (

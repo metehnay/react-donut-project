@@ -5,6 +5,7 @@ import AddDonut from "../components/AddPost/AddDonut";
 import Donuts from "../components/Donuts/Donuts";
 import SinglePage from "../components/Donuts/SinglePage";
 import Liked from "../components/Liked/Liked";
+import Popular from "../components/Popular";
 
 // General |
 const commonRoutes = [
@@ -31,6 +32,10 @@ const commonRoutes = [
   {
     path: "/donuts/:id/:title",
     element: <SinglePage />,
+  },
+  {
+    path: "/popular-donuts",
+    element: <Popular />,
   },
 ];
 
