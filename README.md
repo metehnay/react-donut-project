@@ -20,6 +20,8 @@ https://tastydonuts.netlify.app/
 
 - User name & photo added into single posts. 
 
+- Sweetalert + Toastify alerts will show up in most actions.
+- 
 ## Installation
 
 Install tasty donuts with npm
