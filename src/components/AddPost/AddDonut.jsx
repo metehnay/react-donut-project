@@ -4,11 +4,12 @@ import { db, auth } from "../../configs/firebase";
 import { useNavigate, Link } from "react-router-dom";
 import { Form, Button, Row, Col, Card, Container } from "react-bootstrap";
 import { useContext, MainContext } from "../../hook/Context";
-import RichEditor from "./RichEditor";
-
+import Swal from "sweetalert2";
+import withReactContent from "sweetalert2-react-content";
 
 const AddDonut = () => {
   const { isAuth, setIsAuth } = useContext(MainContext);
+  const MySwal = withReactContent(Swal);
 
   const [title, setTitle] = useState("");
   const [imageURL, setImageURL] = useState("");
@@ -33,6 +34,11 @@ const AddDonut = () => {
 
   useEffect(() => {
     if (!isAuth) {
+      MySwal.fire(
+        'You must be log in first!',
+        'Logged in users can share donuts',
+        'warning'
+      )
       navigate("/login");
     }
   }, []);

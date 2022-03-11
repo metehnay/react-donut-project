@@ -10,15 +10,22 @@ const Liked = ({ isAuth, setIsAuth, addFavorite }) => {
     <>
       {" "}
       <div className="containers">
-        <p className=" mt-2 btn btn-primary d-flex justify-content-center api">
-          <button
+      {localStorage.getItem("dam") ?
+       <>
+      <p className=" mt-2 btn btn-primary d-flex justify-content-center api">
+     <button
             onClick={removeFavourites}
             className="btn btn-primary border-0 fixo w-100"
             style={{color: "#ffffff"}}
           >
             REMOVE LIKED DONUTS
           </button>
+          
         </p>
+        </>
+        :
+        <p className="mt-2 btn btn-primary d-flex justify-content-center api" style={{color: "#ffffff", fontWeight: "600"}}>You haven't liked any donuts yet. :( </p>
+}
         <div className="sidebar">
           {" "}
           <div className="norris mt-4">
