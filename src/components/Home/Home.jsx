@@ -41,7 +41,7 @@ const Home = () => {
         <div className="container py-4 pb-4 fe" style={{borderTop: "3px solid #52ccd1"}}>
       <h4 className="hot">What's <span style={{color: "#52CCD1"}}>Popular</span></h4>
       <div className="d-flex flex-row flex-wrap">
-    {postLists.slice(0, 4).map((post) => (
+    {postLists.slice(0, 6).map((post) => (
     <>
      <Link to={`/donuts/${post.id}/${post.title}`} style={{color: "#000000"}}>
     <div className="d-flex flex-column ms-auto mx-auto p-2">

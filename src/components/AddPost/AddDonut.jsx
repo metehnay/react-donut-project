@@ -35,7 +35,7 @@ const AddDonut = () => {
   useEffect(() => {
     if (!isAuth) {
       MySwal.fire(
-        'You must be log in first!',
+        'You must be login first!',
         'Logged in users can share donuts',
         'warning'
       )
